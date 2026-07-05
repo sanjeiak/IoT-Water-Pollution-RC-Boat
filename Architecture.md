@@ -2,6 +2,8 @@
 
 The system is organized as one physical unit — the **Unmanned Surface Vehicle (USV)** — built on a mild-steel hull with sponge floats and powered by a 12V battery, plus an external **Remote Control (Ground Station)** operated from shore. The onboard system is split into five functional subsystems, all coordinated through a central Arduino UNO R4 WiFi microcontroller.
 
+![System Architecture](architecture.png)
+
 ## Components List
 
 | # | Component | Type / Spec | Function |
