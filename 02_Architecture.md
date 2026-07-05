@@ -3,6 +3,9 @@
 The system is organized as one physical unit — the **Unmanned Surface Vehicle (USV)** — built on a mild-steel hull with sponge floats and powered by a 12V battery, plus an external **Remote Control (Ground Station)** operated from shore. The onboard system is split into five functional subsystems, all coordinated through a central Arduino UNO R4 WiFi microcontroller.
 
 ![System Architecture](Images/architecture.png)
+<p align="center">
+  <em>Figure 1. Architecture of IoT Water Pollution Monitoring Boat</em>
+</p>
 
 ## Components List
 
@@ -76,5 +79,10 @@ The system is organized as one physical unit — the **Unmanned Surface Vehicle 
 
 10. **Continuous cycle** — Steps 2–9 repeat throughout deployment, so the boat is simultaneously collecting geo-tagged water-quality data (with redundant online + offline storage) while being actively piloted from shore.
 
-    
-![Boat_Image](Images/Boat_Image.png)
+ <p align="center">
+  <img src="Images/Boat_Image.png" width="500">
+</p>
+
+<p align="center">
+  <em>Figure 2. IoT Water Pollution Monitoring Boat</em>
+</p>
