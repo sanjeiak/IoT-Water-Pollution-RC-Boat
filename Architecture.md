@@ -75,3 +75,4 @@ The system is organized as one physical unit — the **Unmanned Surface Vehicle 
 9. **Actuation** — The RF receiver's output is converted to PWM, driven through the 12V servo motor driver, and sent as a digital signal to the two servo motors, which move the propeller shaft and rudder to steer and propel the boat.
 
 10. **Continuous cycle** — Steps 2–9 repeat throughout deployment, so the boat is simultaneously collecting geo-tagged water-quality data (with redundant online + offline storage) while being actively piloted from shore.
+![System Architecture](Boat_image.png)
