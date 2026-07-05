@@ -2,6 +2,33 @@
 
 The system is organized as one physical unit — the **Unmanned Surface Vehicle (USV)** — built on a mild-steel hull with sponge floats and powered by a 12V battery, plus an external **Remote Control (Ground Station)** operated from shore. The onboard system is split into five functional subsystems, all coordinated through a central Arduino UNO R4 WiFi microcontroller.
 
+## Components List
+
+| # | Component | Type / Spec | Function |
+|---|---|---|---|
+| 1 | pH Sensor | Analog | Measures acidity/alkalinity of the water |
+| 2 | Turbidity Sensor | Analog | Measures water clarity (NTU) |
+| 3 | Temperature Sensor | Digital | Measures water temperature |
+| 4 | Dissolved Oxygen (DO) Sensor | Analog | Measures oxygen available for aquatic life |
+| 5 | Conductivity Sensor | Digital | Measures dissolved-ion concentration in water |
+| 6 | GPS Module | Navigation | Supplies live coordinates to geo-tag each reading |
+| 7 | Arduino UNO R4 WiFi (Central Microcontroller) | Main MCU | Reads all sensors, coordinates GPS, routes data to all subsystems |
+| 8 | Arduino UNO R4 WiFi (Online Transmission) | Comms MCU | Sends processed readings over Wi-Fi |
+| 9 | Wi-Fi Access Point | Networking | Relays readings from the boat to the Web Dashboard |
+| 10 | Web Dashboard | Software | Real-time remote monitoring interface |
+| 11 | Arduino UNO R4 WiFi (Offline Storage) | Comms MCU | Writes readings to the Micro SD card |
+| 12 | Micro SD Card + Slot | Storage | Offline data logging when no network is available |
+| 13 | 2-Channel RF Transmitter | RF, 2-channel | Sends/receives control signals over the RF link |
+| 14 | 2-Channel RF Receiver | RF, 2-channel | Receives movement commands on the boat |
+| 15 | Servo Motor Driver | 12V | Converts PWM signal into motor drive current |
+| 16 | Servo Motors | x2, 12V, 500 RPM | Drive the propeller shaft and rudder |
+| 17 | Remote Control (Ground Station) | Handheld unit | Operator's controller for steering the boat |
+| 18 | LCD Display | Local display | Shows live USV status on the boat itself |
+| 19 | Arduino UNO R4 WiFi (HMI) | Display MCU | Drives the on-board LCD display |
+| 20 | 12V Battery | Power source | Powers the entire onboard system |
+| 21 | Power Management Unit (PMU) | Power regulation | Distributes 12V / 5V / 3.3V rails to all subsystems |
+| 22 | Mild-Steel Hull + Sponge Floats | Structure | Boat body — buoyancy and low water resistance |
+
 ## Architecture Description
 
 1. **Sensor Array (Water Quality)** — Five sensors continuously sample the water: pH, turbidity, and dissolved oxygen (DO) send analog signals, while temperature and conductivity send digital signals. All five feed directly into the central Arduino UNO R4 WiFi.
