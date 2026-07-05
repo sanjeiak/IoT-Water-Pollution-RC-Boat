@@ -25,18 +25,3 @@ Low-cost & repeatable — readings are taken automatically every ~10 seconds whi
 Durable hull design — mild-steel hull shaped to reduce water resistance, with buoyant sponge fittings for stable floating
 
 
-System Architecture
-
-The system is built in two independent halves that are then integrated together: the boat/propulsion unit and the water-quality sensing unit. Both share the same RF link back to the operator's remote.
-
-1. Propulsion & Control Path
-The operator uses an RF transmitter to send movement commands (left, right, forward, reverse). These are picked up by a two-channel RF receiver mounted on the boat. The receiver forwards the decoded signal to two 12V, 500 RPM servo motors, which drive the propeller shaft and rudder to steer and move the boat across the water.
-
-2. Sensing & Data Path
-Mounted on a plywood deck on top of the boat sits the sensing package: pH sensor, turbidity sensor, temperature sensor, an Arduino microcontroller, a transistor/switch circuit, and a second RF module. The Arduino polls all three sensors at a fixed interval (roughly every 10 seconds), computes the pH and turbidity readings, and pushes the combined result out over RF back to the remote control.
-
-3. Remote/Display Unit
-The handheld remote contains the RF transmitter (for boat control) and an LCD screen. As sensor packets arrive from the boat's RF module, the display updates with the current pH, turbidity, and temperature values — giving the operator an immediate read on water quality at that exact location.
-
-4. Power
-Both the propulsion system and the sensor/Arduino system draw from a 12V battery carried on the boat.
