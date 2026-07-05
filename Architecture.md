@@ -2,7 +2,7 @@
 
 The system is organized as one physical unit — the **Unmanned Surface Vehicle (USV)** — built on a mild-steel hull with sponge floats and powered by a 12V battery, plus an external **Remote Control (Ground Station)** operated from shore. The onboard system is split into five functional subsystems, all coordinated through a central Arduino UNO R4 WiFi microcontroller.
 
-![System Architecture](architecture.png)
+![System Architecture](Images/architecture.png)
 
 ## Components List
 
@@ -77,4 +77,4 @@ The system is organized as one physical unit — the **Unmanned Surface Vehicle 
 10. **Continuous cycle** — Steps 2–9 repeat throughout deployment, so the boat is simultaneously collecting geo-tagged water-quality data (with redundant online + offline storage) while being actively piloted from shore.
 
     
-![System Architecture](Boat_Image.png)
+![Boat_Image](Images/Boat_Image.png)
